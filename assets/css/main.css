@@ -2256,14 +2256,15 @@ input, select, textarea {
 		}
 
 		.icon.major {
-			border: solid 2px;
+			border: solid 10px;
 			display: inline-block;
 			border-radius: 100%;
 			padding: 0.65em;
 			margin: 0 0 2em 0;
 			cursor: default;
+			visibility: hidden;
 		}
-
+		
 			.icon.major:before {
 				display: inline-block;
 				font-size: 6.25rem;
@@ -2271,9 +2272,24 @@ input, select, textarea {
 				height: 2.25em;
 				line-height: 2.2em;
 				border-radius: 100%;
-				border: solid 0px;
+				border: solid 3px;
 				text-align: center;
+				visibility: visible;
+				margin: 0 0 9px 0;
 			}
+		
+			.icon.major img{
+				display: inline-block;
+				font-size: 6.25rem;
+				width: 2.25em;
+				height: auto;
+				border-radius: 100%;
+				border: solid 3px;
+				visibility: visible;
+				text-align: center;
+				line-height: 2.2em;
+				border-color: #dddddd;
+			}	
 
 		.icon.alt {
 			display: inline-block;
@@ -2315,6 +2331,9 @@ input, select, textarea {
 			.icon.major:before {
 				font-size: 5.5rem;
 			}
+			.icon.major img{
+				font-size: 5.5rem;
+			}	
 
 		}
 
@@ -2323,6 +2342,9 @@ input, select, textarea {
 			.icon.major:before {
 				font-size: 4.75rem;
 			}
+			.icon.major img{
+				font-size: 4.75rem;
+			}	
 
 		}
 
@@ -2334,6 +2356,9 @@ input, select, textarea {
 			}
 
 				.icon.major:before {
+					font-size: 3.5rem;
+				}
+				.icon.major img{
 					font-size: 3.5rem;
 				}
 
