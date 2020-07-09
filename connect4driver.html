@@ -7,7 +7,7 @@
     text-align: center;
   }
   H1 {
-    font-size: 24px;
+    font-size: 2em;
   }
 
   #colorTurn {
@@ -43,11 +43,15 @@
     border-radius: 50%;
     margin: 2px;
   }</style>
-  <button class="startgame">Run connect4game</button>
-  <input checked type="radio" name="firstorsecond" value="1" id="RADIOgofirst">Go First!
-  <input type="radio" name="firstorsecond" value="2" id="RADIOgosecond">Go Second!
-
-    
+  <button class="startgame primary">Play</button>
+  <span>
+    <input type="radio" id="RADIOgofirst" name="firstorsecond" checked>
+    <label for="RADIOgofirst">Go First</label>
+  </span>
+  <span>
+    <input type="radio" id="RADIOgosecond" name="firstorsecond">
+    <label for="RADIOgosecond">Go Second</label>
+  </span> 
    </head><body>
         <div id="grid">
             <div class="row">
