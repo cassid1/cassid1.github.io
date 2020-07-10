@@ -11,13 +11,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script type="text/javascript" src="connect4driver.js"></script>
+		<script type="text/javascript" src="NNdemo.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script> 
 			$(function(){
-			  $("#DivConnect4").load("connect4driver.html"); 
+				$("#DivNNdemo").load("NNdemo.html"); 
 			});
-			</script> 
+		</script> 
 	</head>
 	<body class="is-preload">
 
@@ -57,12 +57,19 @@
 										<header class="major">
 											<h2>C++ Neural Network</h2>
 										</header>
-										<p>gamer time.</p>
+										<p style="margin-right: 10px;">&nbsp&nbsp&nbsp&nbsp This Neural Network, along with its various applications, was built in two weeks as the final project of a class. First, we built the Node, Layer, and Network classes. Then once a network could back-propagate, we applied it to various tasks, like the Connect Four game here. A year later, I ported the C++ to Web Assembly so that it can be run in a local browser. Credit to my talented partner Luke Malek, as this project would not be here today without his work. <br />
+										&nbsp&nbsp&nbsp&nbsp Note that the network you are playing is quite limited in size and training time, so please be gentle. If you don't beat it right away, you will see that it likes to win vertically, and is also absolutely terrible at winning diagonally. Sometimes it will even block your wins.</p>
 										<ul class="actions">
 											<li><a href="generic.html" class="button">Learn More</a></li>
 										</ul>
+										<header  class="major">
+											<h2>Generative Adversarial Network C++</h2>
+										</header>
+										<p>uhhhhhhhhhhhh</p>
+										<ul class = "actions">
+											<li><a href="generic.html" class="button">Learn More</a></li>
 									</div>
-									<span id="DivConnect4"></span>
+									<span id="DivNNdemo"></span>
 								</div>
 							</section>
 

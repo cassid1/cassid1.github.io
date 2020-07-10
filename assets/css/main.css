@@ -3810,3 +3810,25 @@ input, select, textarea {
 			}
 
 		}
+/* Interactive Elements*/
+@media screen and (max-width: 1680px) {
+
+	#DivNNdemo {
+		font-size: 10px;
+	}
+
+}
+@media screen and (max-width: 1280px) {
+
+	#DivNNdemo {
+		font-size: 9px;
+	}
+
+}
+@media screen and (max-width: 736px) {
+
+	#DivNNdemo {
+		font-size: 8px;
+	}
+
+}
