@@ -60,14 +60,14 @@
 										<p style="margin-right: 20px;">&nbsp&nbsp&nbsp&nbsp This Neural Network, along with its various applications, was built in two weeks as the final project of a class. First, we built the Node, Layer, and Network classes. Then once a network could back-propagate, we applied it to various tasks, like the Connect Four game here. A year later, I ported the C++ to Web Assembly so that it can be run in a local browser. Credit to my talented partner <a target="_blank" href="https://github.com/lukemalek">Luke Malek</a>, as this project would not be here today without his work.<br/>
 										&nbsp&nbsp&nbsp&nbsp Note that the network you are playing is quite limited in size and training time, so please be gentle. If you don't beat it right away, you will see that it likes to win vertically, and is also absolutely terrible at winning diagonally. Sometimes it will even block your wins.</p>
 										<ul class="actions">
-											<li><a href="generic.html" class="button">Learn More</a></li>
+											<li><a href="neural_net_info.html" class="button">Learn More</a></li>
 										</ul>
 										<header  class="major">
 											<h2>Generative Adversarial Network C++</h2>
 										</header>
-										<p>uhhhhhhhhhhhh</p>
+										<p>This GAN is actually a combination of two neural networks built using our network class in C++. The first net is the discriminator, which is given either a sentence from a book or just a random string of characters and learns to classify between the two. Once the discriminator is trained, the generator network takes random input and begins producing strings of text to give to the discriminator. If those string of text look like sentences and the discriminator is "fooled", then the discriminator learns. On the other hand, if the discriminator correctly identifies the sentence as fake, then the generator learns. As each get better at identifying and producing fake sentences, respectively, then the overally quality of the sentences will improve. With enough training time, resources, and well setup networks, GAN's can go from producing random characters to writing like humans.</p>
 										<ul class = "actions">
-											<li><a href="generic.html" class="button">Learn More</a></li>
+											<li><a href="neural_net_info.html" class="button">Learn More</a></li>
 									</div>
 									<span id="DivNNdemo"></span>
 								</div>
@@ -87,7 +87,7 @@
 									<li>
 										<span class="icon major style5"><img class="logo-major" src="images/kubernetes.png" alt=""/></span>
 										<h3>Infrastructure Improvements</h3>
-										<p>Lead the transistion from Dokku hosted apps to Kubernetes hosted apps, and also set up the school's Gitlab server on Kubernetes.</p>
+										<p>Lead the transistion from Dokku hosted apps to Kubernetes hosted apps, and also set up the school's main high availability cluster.</p>
 									</li>
 									<li>
 										<span class="icon major style1 fa-gem"></span>
@@ -97,18 +97,19 @@
 								</ul>
 								<footer class="major">
 									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
+										<li><a href="https://hipercic3-devel.cs.stolaf.edu" target="_blank" class="button">Learn More</a></li>
 									</ul>
 								</footer>
 							</section>
 
-						<!-- Second Section -->
+						<!-- Second Section--->
 							<section id="technologies" class="main special">
 								<header class="major">
 									<h2>My Tech Skills</h2>
 									<p>I'm passionate about learning, making cool things,<br />
 									and sharing them with the world!</p>
 								</header>
+								<!--
 								<ul class="statistics">
 									<li class="style1">
 										<span class="icon solid fa-code-branch"></span>
@@ -131,14 +132,17 @@
 										<strong>1,024</strong> Nullam
 									</li>
 								</ul>
-								<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
+								--->
+								<p class="content">My go to programming tools for building something new are <i>C++</i> and <i>Python</i>. Through my HiPerCiC work I have become familiar with <i>Docker</i> and <i>Kubernetes</i> for deployment, as well as a full development stack going from <i>HTML, CSS, JS</i> to <i>Django</i> to <i>Postgres</i>. With my machine learning work, I have taught myself some of <i>OpenMP</i>, <i>OpenACC</i>, and <i>WASM</i>. I am also very comfortable working with <i>Linux</i> and <i>Git</i>.</p>
+								<!--
 								<footer class="major">
 									<ul class="actions special">
 										<li><a href="generic.html" class="button">Learn More</a></li>
 									</ul>
 								</footer>
+								--->
 							</section>
-
+						
 						<!-- Get Started -->
 							<section id="about_me" class="main special">
 								<header class="major">
@@ -146,19 +150,18 @@
 									<p>I enjoy teaching myself new skills and picking something apart to reverse engineer it.
 										Those skills are how I built this website.  I really do love the satisfaction of creating a product that works well.
 										Outside of coding, I do cross country and track, which means I spend more than an hour each day running.
-										I also love to play chess, both online and in person. I live in Longmont, CO and go to school in Northfield MN.</p>
+										I also love to play chess, both online and in person. I live in Longmont, CO and go to school in Northfield, MN.</p>
 								</header>
 								<footer class="major">
 									<ul class="actions special">
-										<li><a href="generic.html" class="button primary">Hire Me!</a></li>
-										<li><a href="generic.html" class="button">Learn More</a></li>
+										<li><a target="_blank" href="mailto:cassid1@stolaf.edu?subject=Job Offer&body=Dear Eliott, I loved your website and I would like to let you know about a great opportunity I have for you!" class="button primary">Hire Me!</a></li>
 									</ul>
 								</footer>
 							</section>
 
 					</div>
 
-				<!-- Footer -->
+				<!-- Footer 
 					<footer id="footer">
 						<section>
 							<h2>Aliquam sed mauris</h2>
@@ -187,7 +190,7 @@
 						</section>
 						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
-
+				--->
 			</div>
 
 		<!-- Scripts -->
