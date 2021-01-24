@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Eliott Cassidy, Web Developer</title>
+		<title>Eliott Cassidy, Software Engineer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -34,13 +34,14 @@
 						</style>
 						<h1>Eliott Cassidy</h1>
 						<h3>Full Stack Development and System Administration<br />
-						Majoring in C.S. and Math at <a target="_blank" href="https://stolaf.edu">St. Olaf College</a></h3>
+						Majoring in Computer Science and Math at <a target="_blank" href="https://stolaf.edu">St. Olaf College</a></h3>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
 							<li><a href="#projects" class="active">Projects</a></li>
+							<li><a href="#algorithms">Algorithms</a></li>
 							<li><a href="#experience">Experience</a></li>
 							<li><a href="#technologies">Technologies</a></li>
 							<li><a href="#about_me">About Me</a></li>
@@ -50,7 +51,7 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Introduction -->
+						<!-- Interactive Projects -->
 							<section id="projects" class="main projects">
 								<div class="spotlight">
 									<div class="content">
@@ -58,22 +59,99 @@
 											<h2>C++ Neural Network</h2>
 										</header>
 										<p style="margin-right: 20px;">&nbsp&nbsp&nbsp&nbsp This Neural Network, along with its various applications, was built in two weeks as the final project of a class. First, we built the Node, Layer, and Network classes. Then once a network could back-propagate, we applied it to various tasks, like the Connect Four game here. A year later, I ported the C++ to Web Assembly so that it can be run in a local browser. Credit to my talented partner <a target="_blank" href="https://github.com/lukemalek">Luke Malek</a>, as this project would not be here today without his work.<br/>
-										&nbsp&nbsp&nbsp&nbsp Note that the network you are playing is quite limited in size and training time, so please be gentle. If you don't beat it right away, you will see that it likes to win vertically, and is also absolutely terrible at winning diagonally. Sometimes it will even block your wins.</p>
+										&nbsp&nbsp&nbsp&nbsp Note that the network you are playing is quite limited in size and training time, so please be gentle. If you don't beat it right away, you will see that it likes to win vertically, but is absolutely terrible at winning diagonally. Sometimes it will even block your wins.</p>
 										<ul class="actions">
 											<li><a href="neural_net_info.html" class="button">Learn More</a></li>
 										</ul>
 										<header  class="major">
 											<h2>Generative Adversarial Network C++</h2>
 										</header>
-										<p>This GAN is actually a combination of two neural networks built using our network class in C++. The first net is the discriminator, which is given either a sentence from a book or just a random string of characters and learns to classify between the two. Once the discriminator is trained, the generator network takes random input and begins producing strings of text to give to the discriminator. If those string of text look like sentences and the discriminator is "fooled", then the discriminator learns. On the other hand, if the discriminator correctly identifies the sentence as fake, then the generator learns. As each get better at identifying and producing fake sentences, respectively, then the overally quality of the sentences will improve. With enough training time, resources, and well setup networks, GAN's can go from producing random characters to writing like humans.</p>
+										<p>This GAN is actually a combination of two neural networks built using our network class in C++. The first net is the discriminator, which is given either a sentence from a book or just a random string of characters and learns to classify between the two. Once the discriminator is trained, the generator network takes random input and begins producing strings of text to give to the discriminator. If those strings of text look like sentences and the discriminator is "fooled", then the discriminator learns. On the other hand, if the discriminator correctly identifies the sentence as fake, then the generator learns. As each get better at identifying and producing fake sentences, respectively, then the overally quality of the sentences will improve. With enough training time, resources, and well setup networks, GAN's can go from producing random characters to writing like humans.</p>
 										<ul class = "actions">
 											<li><a href="neural_net_info.html" class="button">Learn More</a></li>
+										</ul>
 									</div>
 									<span id="DivNNdemo"></span>
 								</div>
 							</section>
 
-						<!-- First Section -->
+							<!-- Algorithms -->
+							<script>
+								function showFoobarCode(name) {
+									if(document.getElementById(name).hidden == true){
+										var toBeHidden = document.getElementsByClassName("FBcode");
+										for (i = 0; i < toBeHidden.length; i++) {
+   											toBeHidden[i].hidden = true;
+										}
+										document.getElementById(name).hidden = false;
+									}
+									else{
+										var toBeHidden = document.getElementsByClassName("FBcode");
+										for (i = 0; i < toBeHidden.length; i++) {
+   											toBeHidden[i].hidden = true;
+										}
+									}
+								}
+							</script>
+							<section class="main projects">
+								<div id ="algorithms" class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Google FooBar</h2>
+										</header>
+										<p style="margin-right: 20px;">&nbsp&nbsp&nbsp&nbsp I have completed Google's secret hiring challenge, FooBar, which tests a programmer's creativity and knowledge regarding algorithms and data structures. There are five levels to FooBar, whith each level becoming progressively more challenging. My solutions, written in Python and sorted by level, are below. For information and the descriptions of all FooBar problems, click <a href="https://github.com/tssovi/google-foobar-challenge" target="_blank" >here</a> if you are interested.</p>
+									</div>
+								</div>
+								<header class="major">
+									<p>Level 1</p>
+								</header>
+								<ul class="alt">
+									<li class= "dropdown" onclick="showFoobarCode('FB:i-love-lance-and-janice')">I Love Lance & Janice: string manipulation</li>
+									<li hidden id="FB:i-love-lance-and-janice" class ="FBcode"><p><i>Input:</i> a string <code>x</code> </br><i>Output:</i> the same string with the lowercase letters swapped </br><i>Example:</i> <code>solution("ab7Cz")</code> returns <code>"zy7Ca"</code></p><script src="https://gist.github.com/cassid1/c219122e76ede1048aba2c5285077543.js?file=i-love-lance-and-janice.py"></script></li>
+									<li class= "dropdown" onclick="showFoobarCode('FB:solar-doomsday')">Solar Doomsday: division of positive integers into fewest square numbers</li>
+									<li hidden id="FB:solar-doomsday" class ="FBcode"><p><i>Input:</i> a positive integer <code>n</code> </br><i>Output:</i> a list of the fewest possible square numbers that sum to <code>n</code>, sorted in descending order</br><i>Example:</i> <code>solution(55)</code> returns <code>[7,4,1,1]</code></p><script src="https://gist.github.com/cassid1/c219122e76ede1048aba2c5285077543.js?file=solar-doomsday.py"></script></li>
+								</ul>
+								<header class="major">
+									<p>Level 2</p>
+								</header>
+								<ul class="alt">
+									<li class= "dropdown" onclick="showFoobarCode('FB:dont-get-volunteered')">Don't Get Volunteered: breadth first search or lookup tables</li>
+									<li hidden id="FB:dont-get-volunteered" class ="FBcode"><p><i>Input:</i> a pair of integers <code>src</code> and <code>dest</code> from 0 to 63 inclusive, representing squares on a chess board </br><i>Output:</i> the minimum number of knight moves required to go from one square to another</br><i>Example:</i> <code>solution(19,36)</code> returns <code>1</code></p><script src="https://gist.github.com/cassid1/c219122e76ede1048aba2c5285077543.js?file=dont-get-volunteered.py"></script></li>
+									<li class= "dropdown" onclick="showFoobarCode('FB:please-pass-the-coded-messages')">Please Pass The Coded Messages: divisibility and remainders</li>
+									<li hidden id="FB:please-pass-the-coded-messages" class ="FBcode"><p><i>Input:</i> a list of digits <code>l</code> from 0 to 9 inclusive</br><i>Output:</i> the largest possible number that can be constructed from those digits that is divisible by 3</br><i>Example:</i> <code>solution([3, 1, 4, 1, 5, 9])</code> returns <code>94311</code></p><script src="https://gist.github.com/cassid1/c219122e76ede1048aba2c5285077543.js?file=please-pass-the-coded-messages.py"></script></li>
+									<li class= "dropdown" onclick="showFoobarCode('FB:en-route-salute')">En Route Salute: strings, arrays</li>
+									<li hidden id="FB:en-route-salute" class ="FBcode"><p><i>Input:</i> a string <code>s</code> containing the characters &lt , &gt, and - </br><i>Output:</i> the number of salutes; a &lt is thought of as moving leftward through the string, and a &gt moves rightward, and when a &lt and a $gt pass eachother, two salutes occur</br><i>Example:</i> <code>solution("--&lt----&lt---&gt&gt-&lt---")</code> returns <code>4</code></p><script src="https://gist.github.com/cassid1/c219122e76ede1048aba2c5285077543.js?file=en-route-salute.py"></script></li>
+								</ul>
+								<header class="major">
+									<p>Level 3</p>
+								</header>
+								<ul class="alt">
+									<li class= "dropdown" onclick="showFoobarCode('FB:fuel-injection-perfection')">Fuel Injection Perfection: integer factoring, optimization</li>
+									<li hidden id="FB:fuel-injection-perfection" class ="FBcode"><p><i>Input:</i> an integer <code>n</code> </br><i>Output:</i> the minimum number of steps required to get to 1, where a step can be adding 1, subtracting 1, or dividing the current number by 2 if it is even</br><i>Example:</i> <code>solution(15)</code> returns <code>5</code></p><script src="https://gist.github.com/cassid1/c219122e76ede1048aba2c5285077543.js?file=fuel-injection-perfection.py"></script></li>
+									<li class= "dropdown" onclick="showFoobarCode('FB:find-the-access-codes')">Find the Access Codes: optimization, arrays</li>
+									<li hidden id="FB:find-the-access-codes" class ="FBcode"><p><i>Input:</i> an array of integers <code>l</code> </br><i>Output:</i> The number of lucky triples within <code>l</code> with a lucky triple being defined as indices <code>i,j,k</code> such that <code>i</code> &lt <code>j</code> &lt <code>k</code> and <code>l[i]</code> divides <code>l[j]</code> and <code>l[j]</code> divides <code>l[k]</code> </br><i>Example:</i> <code>solution([1, 2, 3, 4, 5, 6])</code> returns <code>3</code></p><script src="https://gist.github.com/cassid1/c219122e76ede1048aba2c5285077543.js?file=find-the-access-codes.py"></script></li>
+									<li class= "dropdown" onclick="showFoobarCode('FB:prepare-the-bunnies-escape')">Prepare the Bunnies' Escape: modified breadth first search, binary mazes</li>
+									<li hidden id="FB:prepare-the-bunnies-escape" class ="FBcode"><p><i>Input:</i> a two dimensional array <code>map</code> representing a maze, with 1 being a wall and 0 being a path </br><i>Output:</i> the length of the shortest path from the top left corner of the maze to the bottom right corner, with the ability to remove one wall of your choosing</br><i>Example:</i> <code>solution([[0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 0], [0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 1, 1], [0, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0]])</code> returns <code>11</code></p><script src="https://gist.github.com/cassid1/c219122e76ede1048aba2c5285077543.js?file=prepare-the-bunnies-escape.py"></script></li>
+									<li class= "dropdown" onclick="showFoobarCode('FB:elevator-maintenance')">Elevator Maintenance: multifactor sorting, linked lists</li>
+									<li hidden id="FB:elevator-maintenance" class ="FBcode"><p><i>Input:</i> an array of strings <code>l</code> where each element is a version number, dot separated, consisting of 1,2, or 3 levels, with the major version being to the left and the minor version being to the right</br><i>Output:</i> The same list <code>l</code> sorted by version number such that the leftmost version numbers are sorted first, then within a particular major verison number the middle versions are sorted, and then within each middle version the minor versions are sorted, with the assumption that an element without a type of version number should be put before an otherwise identical element with that version number</br><i>Example:</i> <code>solution(["1.11", "2.0.0", "1.2", "2", "0.1", "1.2.1", "1.1.1", "2.0"])</code> returns <code>["0.1", "1.1.1", "1.2", "1.2.1", "1.11", "2", "2.0", "2.0.0"]</code></p><script src="https://gist.github.com/cassid1/c219122e76ede1048aba2c5285077543.js?file=elevator-maintenance.py"></script></li>
+									<li class= "dropdown" onclick="showFoobarCode('FB:bomb-baby')">Bomb Baby: integer combinations, optimization</li>
+									<li hidden id="FB:bomb-baby" class ="FBcode"><p><i>Input:</i> a pair of strings <code>m</code> and <code>f</code> that will each represent an integer</br><i>Output:</i> Starting with 1 and 1, and being able to add the value of either number to the other repeatedly, return the minimum number of steps to transform 1 and 1 to <code>m</code> and <code>f</code> in the form of a string, or return the string <code>'impossible'</code> if they cannot be reached</br><i>Example:</i> <code>solution('4', '7')</code> returns <code>4</code></p><script src="https://gist.github.com/cassid1/c219122e76ede1048aba2c5285077543.js?file=bomb-baby.py"></script></li>
+								</ul>
+								<header class="major">
+									<p>Level 4</p>
+								</header>
+								<ul class="alt">
+									<li class= "dropdown" onclick="showFoobarCode('FB:running-with-bunnies')">Running With Bunnies: shortest path, Bellman-Ford algorithm, optimization</li>
+									<li hidden id="FB:running-with-bunnies" class ="FBcode"><p><i>Input:</i> a square matrix <code>times</code> represeneting the time taken to go from a row number to a column number and  an integer <code>time</code> represetning the total time at start </br><i>Output:</i> A run is started from position 0 and you may move to other positions according to <code>times</code>, but must reach the position with the largest value while time is non-negative, with the objecctive of reaching as many unique positions as possible while still completing the run; return an array of all unique positions, other than the largest and smallest, that make up the greatest possible array size, with one subtracted from all their values, and if multiple solutions of the largest length exist continuously sort them by smallest value until there is one and return that</br><i>Example:</i> <code>solution([[0, 1, 1, 1, 1], [1, 0, 1, 1, 1], [1, 1, 0, 1, 1], [1, 1, 1, 0, 1], [1, 1, 1, 1, 0]], 3)</code> returns <code>[0,1]</code></p><script src="https://gist.github.com/cassid1/c219122e76ede1048aba2c5285077543.js?file=running-with-bunnies.py"></script></li>
+									<li class= "dropdown" onclick="showFoobarCode('FB:escape-pods')">Escape Pods: maximum flow, depth first search</li>
+									<li hidden id="FB:escape-pods" class ="FBcode"><p><i>Input:</i> a square matrix <code>path</code> representing the maximum flow from a row number to a column number, and a list of integers <code>entrances</code> and a list of integers <code>exits</code> such that the two lists are disjoint, and are also locations represented in the matrix </br><i>Output:</i>the maximum flow that can arrive at <code>exits</code> with an unlimited supply at <code>entrances</code>. </br><i>Example:</i> <code>solution([0, 1], [4, 5], [[0, 0, 4, 6, 0, 0], [0, 0, 5, 2, 0, 0], [0, 0, 0, 0, 4, 4], [0, 0, 0, 0, 6, 6], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]])</code> returns <code>16</code></p><script src="https://gist.github.com/cassid1/c219122e76ede1048aba2c5285077543.js?file=escape-pods.py"></script></li>
+								</ul>
+								<header class="major">
+									<p>Level 5</p>
+								</header>
+							</section>
+
+						<!-- Work Experince -->
 							<section id="experience" class="main special">
 								<header class="major">
 									<h2>HiPerCiC Summer Research</h2>
@@ -102,12 +180,14 @@
 								</footer>
 							</section>
 
-						<!-- Second Section--->
+						<!-- Skills --->
 							<section id="technologies" class="main special">
 								<header class="major">
 									<h2>My Tech Skills</h2>
+									<!--
 									<p>I'm passionate about learning, making cool things,<br />
 									and sharing them with the world!</p>
+									-->
 								</header>
 								<!--
 								<ul class="statistics">
@@ -143,11 +223,11 @@
 								--->
 							</section>
 						
-						<!-- Get Started -->
+						<!-- About Me -->
 							<section id="about_me" class="main special">
 								<header class="major">
 									<h2>About Me</h2>
-									<p>I enjoy teaching myself new skills and picking something apart to reverse engineer it.
+									<p>I enjoy teaching myself new things and picking something apart to reverse engineer it.
 										Those skills are how I built this website.  I really do love the satisfaction of creating a product that works well.
 										Outside of coding, I do cross country and track, which means I spend more than an hour each day running.
 										I also love to play chess, both online and in person. I live in Longmont, CO and go to school in Northfield, MN.</p>

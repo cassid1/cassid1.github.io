@@ -3842,3 +3842,6 @@ input, select, textarea {
 		margin-bottom: 5em !important;
 	}
 }
+li.dropdown:hover {
+	background-color: #eaedf0e1;
+}
